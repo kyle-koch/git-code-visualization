@@ -50,7 +50,6 @@ function Main() {
         borderColor: getRandomColor(),
       });
     });
-
     return datasets;
   };
 
@@ -166,14 +165,12 @@ const getRandomColor = () => {
       }
     },
   };
-  
 
 const getFadedColor = (color, opacity) => {
   const r = parseInt(color.substring(1, 3), 16);
   const g = parseInt(color.substring(3, 5), 16);
   const b = parseInt(color.substring(5, 7), 16);
   const rgbaColor = `rgba(${r}, ${g}, ${b}, ${opacity})`;
-
   return rgbaColor;
 };
 
@@ -222,8 +219,8 @@ const fadedDatasets = chartData.datasets.map((dataset, index) => {
           <button className='coolButts' onClick={() => handleDataChange(stars, 'Stars')}>Star Events</button>
         </div>
       </div>
-      <p className='credit'>Data provided by:&nbsp;<a href='https://madnight.github.io/githut/' target='_blank' rel='noopener noreferrer'>GitHut 2.0</a></p>
-
+      <p className='credit'>Data provided by:&nbsp;
+      <a href='https://madnight.github.io/githut/' target='_blank' rel='noopener noreferrer'>GitHut 2.0</a></p>
     </>
   );
   
